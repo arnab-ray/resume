@@ -13,34 +13,20 @@
     "phone": "9886374828",
     "website": "https://www.linkedin.com/in/arnab008/"
   },
-  "education": [
-    {
-      "institution": "Indian Institute of Technology Guwahati",
-      "area": "Computer Science",
-      "studyType": "M.Tech",
-      "endDate": "2013",
-      "gpa": "8.78",
-      "startDate": "2011"
-    },
-    {
-      "institution": "West Bengal University of Technology",
-      "studyType": "B.Tech",
-      "area": "Computer Science",
-      "gpa": "8.87",
-      "startDate": "2007",
-      "endDate": "2011"
-    }
-  ],
   "work": [
     {
       "location": "Bangalore",
       "website": "",
       "endDate": "Present",
       "highlights": [
-        "Built the procurement system, to place purchase order for procuring goods. Was involved in conception, development and deployment of it.",
+        "Built the procurement system, to place purchase order for procuring goods. Was involved in conception, design, development and deployment of it.",
         "Built the workflow of Just-In-Time procurement from scratch with three working models, having integration with our fulfilment and supply chain.",
+        "Built service to perform vendor selection with a peak qps of 500 with 50ms of p99 latency.",
+        "Built a state machine as a library with persistence support.",
+        "Built a distributed lock library based on cosmosDB.",
+        "Reduced cost for the microservices by optimising DB queries.",
         "Revamped product catalog system and refactored procurement to reduce IRN-GRN mismatch.",
-        "Refactored to break down “first-party service” into separate micro-services.",
+        "Moved the monolith “first-party service” to micro-services.",
         "Improved coding practices by introducing eliminating blocking codes, incorporated code linters, adding unit tests."
       ],
       "company": "Udaan",
@@ -72,6 +58,24 @@
       "location": "Bangalore",
       "startDate": "Aug 2013",
       "endDate": "Mar 2016"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Indian Institute of Technology Guwahati",
+      "area": "Computer Science",
+      "studyType": "M.Tech",
+      "endDate": "2013",
+      "gpa": "8.78",
+      "startDate": "2011"
+    },
+    {
+      "institution": "West Bengal University of Technology",
+      "studyType": "B.Tech",
+      "area": "Computer Science",
+      "gpa": "8.87",
+      "startDate": "2007",
+      "endDate": "2011"
     }
   ],
   "skills": [
