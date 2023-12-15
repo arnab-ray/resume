@@ -20,10 +20,10 @@
       "endDate": "Present",
       "highlights": [
         "Built the procurement system, to place purchase order for procuring goods. Was involved in conception, design, development and deployment of it.",
-        "Built the workflow of Just-In-Time procurement from scratch with three working models, having integration with our fulfilment and supply chain.",
-        "Built a service to perform vendor selection with a peak qps of 500 with 50ms of p99 latency.",
-        "Built state machine as a library with persistence support.",
-        "Built a distributed lock library based on cosmosDB.",
+        "Built the workflow of Just-In-Time procurement from scratch for three working models, having integration with our invoicing, fulfilment and supply chain. Also integrated this workflow with third-party vendors like Unicommerce, Capillary Tech, Vinculum.",
+        "Built vendor selection platform with a peak qps of 500 with 50ms of p99 latency.",
+        "Implemented state machine as a library with persistence support.",
+        "Implemented a distributed lock library based on cosmosDB.",
         "Reduced cost for the microservices by optimising DB queries.",
         "Revamped product catalog system and refactored procurement to reduce IRN-GRN mismatch.",
         "Moved the monolith “first-party service” to micro-services.",
@@ -100,7 +100,7 @@
     },
     {
       "keywords": [
-        "Hibernate, ActiveRecord."
+        "JDBI, Hibernate, ActiveRecord."
       ],
       "name": "ORM"
     }
