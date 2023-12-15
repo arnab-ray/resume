@@ -21,8 +21,8 @@
       "highlights": [
         "Built the procurement system, to place purchase order for procuring goods. Was involved in conception, design, development and deployment of it.",
         "Built the workflow of Just-In-Time procurement from scratch with three working models, having integration with our fulfilment and supply chain.",
-        "Built service to perform vendor selection with a peak qps of 500 with 50ms of p99 latency.",
-        "Built a state machine as a library with persistence support.",
+        "Built a service to perform vendor selection with a peak qps of 500 with 50ms of p99 latency.",
+        "Built state machine as a library with persistence support.",
         "Built a distributed lock library based on cosmosDB.",
         "Reduced cost for the microservices by optimising DB queries.",
         "Revamped product catalog system and refactored procurement to reduce IRN-GRN mismatch.",
@@ -30,7 +30,7 @@
         "Improved coding practices by introducing eliminating blocking codes, incorporated code linters, adding unit tests."
       ],
       "company": "Udaan",
-      "position": "Software Engineer",
+      "position": "Software Engineer L4",
       "startDate": "Feb 2020"
     },
     {
