@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 4,
+  "selectedTemplate": 1,
   "headings": {
     "skills": "Skills",
     "projects": "",
@@ -13,6 +13,24 @@
     "phone": "9886374828",
     "website": "https://www.linkedin.com/in/arnab008/"
   },
+  "education": [
+    {
+      "institution": "Indian Institute of Technology Guwahati",
+      "area": "Computer Science",
+      "studyType": "M.Tech",
+      "endDate": "2013",
+      "gpa": "8.78",
+      "startDate": "2011"
+    },
+    {
+      "institution": "West Bengal University of Technology",
+      "studyType": "B.Tech",
+      "area": "Computer Science",
+      "gpa": "8.87",
+      "startDate": "2007",
+      "endDate": "2011"
+    }
+  ],
   "work": [
     {
       "location": "Bangalore",
@@ -58,24 +76,6 @@
       "location": "Bangalore",
       "startDate": "Aug 2013",
       "endDate": "Mar 2016"
-    }
-  ],
-  "education": [
-    {
-      "institution": "Indian Institute of Technology Guwahati",
-      "area": "Computer Science",
-      "studyType": "M.Tech",
-      "endDate": "2013",
-      "gpa": "8.78",
-      "startDate": "2011"
-    },
-    {
-      "institution": "West Bengal University of Technology",
-      "studyType": "B.Tech",
-      "area": "Computer Science",
-      "gpa": "8.87",
-      "startDate": "2007",
-      "endDate": "2011"
     }
   ],
   "skills": [

@@ -1,122 +1,139 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is a modified ONE COLUMN version of
-% the following template:
-%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.1 (30/4/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
-% 2. Hacky space on the first bullet point on the second column.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \documentclass[]{deedy-resume-openfont}
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
     \begin{document}
+\vspace*{-40pt}
+
     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     Profile
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{Arnab}{Ray}{ray.arnab008@gmail.com | 9886374828 | https://www.linkedin.com/in/arnab008/}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     Experience
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experience}
-\runsubsection{Udaan}\descript{| Software Engineer}\hfill \location{Bangalore | Feb 2020 – Present}
-\begin{tightemize}
-	\item Built the procurement system, to place purchase order for procuring goods. Was involved in conception, development and deployment of it.
-	\item Built the workflow of Just-In-Time procurement from scratch with three working models, having integration with our fulfilment and supply chain.
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Arnab Ray}}\\
+	ray.arnab008@gmail.com $\cdot$ 9886374828 $\cdot$ https://www.linkedin.com/in/arnab008/\\
+\end{center}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Udaan} \hfill Bangalore\\
+\textit{Software Engineer L4} \hfill Feb 2020 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Built the procurement system, to place purchase order for procuring goods. Was involved in conception, design, development and deployment of it.
+	\item Built the workflow of Just-In-Time procurement from scratch for three working models, having integration with our invoicing, fulfilment and supply chain. Also integrated this workflow with third-party vendors like Unicommerce, Capillary Tech, Vinculum.
+	\item Built vendor selection platform with a peak qps of 500 with 50ms of p99 latency.
+	\item Implemented state machine as a library with persistence support.
+	\item Implemented a distributed lock library based on cosmosDB.
+	\item Reduced cost for the microservices by optimising DB queries.
 	\item Revamped product catalog system and refactored procurement to reduce IRN-GRN mismatch.
-	\item Refactored to break down “first-party service” into separate micro-services.
+	\item Moved the monolith “first-party service” to micro-services.
 	\item Improved coding practices by introducing eliminating blocking codes, incorporated code linters, adding unit tests.
-\end{tightemize}
-\sectionsep
-\runsubsection{Flipkart Internet Pvt. Ltd.}\descript{| Software Engineer II}\hfill \location{Bangalore | Mar 2016 – Feb 2020}
-\begin{tightemize}
+\end{itemize}
+\textbf{Flipkart Internet Pvt. Ltd.} \hfill Bangalore\\
+\textit{Software Engineer II} \hfill Mar 2016 - Feb 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
 	\item Created the engine to support feasibility check for all post order modifications by the customer like changing payment mode, changing address, rescheduling delivery slot or delivery date. It had a qps of 500 reads and 200 writes.
 	\item Implemented fulfilment of multi-part shipment helping to scale furniture vertical. Sticky SLA and easy replacements were facilitated by the feature.
 	\item Implemented fulfilment of grocery handling slotted delivery and lot managed inventory. Extremely critical for scaling up repeat customers.
 	\item Designed and built the capability of multi-location of sellers (third party) and pre- orders for slotted delivery. This helped us to onboard sellers like Decathlon and Big Bazar on to our platform.
 	\item Scaled fulfilment from 100 qps to 300 qps by sharding DB and optimising code.
 	\item Built the environment for testing new features using production load, supporting both read and write APIs.
-\end{tightemize}
-\sectionsep
-\runsubsection{EMC Corporation}\descript{| Sr. Software Engineer}\hfill \location{Bangalore | Aug 2013 – Mar 2016}
-\begin{tightemize}
+\end{itemize}
+\textbf{EMC Corporation} \hfill Bangalore\\
+\textit{Sr. Software Engineer} \hfill Aug 2013 - Mar 2016\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
 	\item Developed installer for Unisphere for VMAX, this was a host management software, this had variant for Chinese market and a cloud platform.
 	\item Created and maintained build scripts for the builds.
-\end{tightemize}
-\sectionsep
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     Education
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Education}
-\raggedright
+\end{itemize}
 
-\runsubsection{Indian Institute of Technology Guwahati}\descript{| M.Tech Computer Science}\hfill \location{2011 - 2013}\\
-GPA: 8.78\\
-\sectionsep
-  
+%==== Education ====%
+\header{Education}
+\textbf{Indian Institute of Technology Guwahati}\\
+M.Tech Computer Science \textit{GPA: 8.78} \hfill 2011 - 2013\\
+\vspace{2mm}
+\textbf{West Bengal University of Technology}\\
+B.Tech Computer Science \textit{GPA: 8.87} \hfill 2007 - 2011\\
+\vspace{2mm}
 
-\runsubsection{West Bengal University of Technology}\descript{| B.Tech Computer Science}\hfill \location{2007 - 2011}\\
-GPA: 8.87\\
-\sectionsep
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     Skills
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Skills}
-\raggedright
+\header{Skills}
 \begin{tabular}{ l l }
-	\descript{Programming Languages} & {\location{Java, Kotlin, Ruby, C, Typescript, ReactJS, Python, Shell Script, Perl, R}} \\
-	\descript{Databases}             & {\location{MySQL, Postgres, Azure SQL Server, Redis, MongoDB, Azure CosmosDB}}         \\
-	\descript{Framework}             & {\location{Dropwizard, Padrino}}                                                       \\
-	\descript{ORM}                   & {\location{Hibernate, ActiveRecord.}}                                                  \\
+	Programming Languages: & Java, Kotlin, Ruby, C, Typescript, ReactJS, Python, Shell Script, Perl, R \\
+	Databases:             & MySQL, Postgres, Azure SQL Server, Redis, MongoDB, Azure CosmosDB         \\
+	Framework:             & Dropwizard, Padrino                                                       \\
+	ORM:                   & JDBI, Hibernate, ActiveRecord.                                            \\
 \end{tabular}
-\sectionsep
+\vspace{2mm}
+
+
+
 
 
 \ 
