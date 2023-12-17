@@ -37,15 +37,15 @@
       "website": "",
       "endDate": "Present",
       "highlights": [
-        "Built the procurement system, to place purchase order for procuring goods. Was involved in conception, design, development and deployment of it.",
-        "Built the workflow of Just-In-Time procurement from scratch for three working models, having integration with our invoicing, fulfilment and supply chain. Also integrated this workflow with third-party vendors like Unicommerce, Capillary Tech, Vinculum.",
+        "Built the procurement system to place purchase order for procuring goods. Involved in conception, design, development and deployment of it.",
+        "Built Just-In-Time (JIT) procurement workflow from scratch for three working models, integrated with our invoicing, fulfilment and supply chain. Also integrated this workflow with third-party vendors like Unicommerce, Capillary Tech and Vinculum.",
         "Built vendor selection platform with a peak qps of 500 with 50ms of p99 latency.",
         "Implemented state machine as a library with persistence support.",
         "Implemented a distributed lock library based on cosmosDB.",
         "Reduced cost for the microservices by optimising DB queries.",
         "Revamped product catalog system and refactored procurement to reduce IRN-GRN mismatch.",
         "Moved the monolith “first-party service” to micro-services.",
-        "Improved coding practices by introducing eliminating blocking codes, incorporated code linters, adding unit tests."
+        "Improved coding practices by eliminating blocking codes, incorporating code linters and unit tests."
       ],
       "company": "Udaan",
       "position": "Software Engineer L4",
@@ -56,9 +56,10 @@
         "Created the engine to support feasibility check for all post order modifications by the customer like changing payment mode, changing address, rescheduling delivery slot or delivery date. It had a qps of 500 reads and 200 writes.",
         "Implemented fulfilment of multi-part shipment helping to scale furniture vertical. Sticky SLA and easy replacements were facilitated by the feature.",
         "Implemented fulfilment of grocery handling slotted delivery and lot managed inventory. Extremely critical for scaling up repeat customers.",
-        "Designed and built the capability of multi-location of sellers (third party) and pre- orders for slotted delivery. This helped us to onboard sellers like Decathlon and Big Bazar on to our platform.",
+        "Designed and built the capability of multi-location of sellers (third party) and pre-orders for slotted delivery. This helped us to onboard sellers like Decathlon and Big Bazar on to our platform.",
         "Scaled fulfilment from 100 qps to 300 qps by sharding DB and optimising code.",
-        "Built the environment for testing new features using production load, supporting both read and write APIs."
+        "Built the environment for testing new features using production load, supporting both read and write APIs.",
+        "Built support for flash sales for appliances."
       ],
       "company": "Flipkart Internet Pvt. Ltd.",
       "position": "Software Engineer II",
@@ -107,9 +108,9 @@
   ],
   "projects": [
     {
-      "name": "",
-      "description": "",
-      "url": "",
+      "name": "Finite State Machine",
+      "description": "An in-memory finite state machine",
+      "url": "https://github.com/arnab-ray/finite-state-machine",
       "keywords": [
         ""
       ]
